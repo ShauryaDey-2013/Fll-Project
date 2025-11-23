@@ -29,9 +29,10 @@ class FastAnalyzer:
     def _setup_analyzer(self):
         """Setup the appropriate analyzer based on tier."""
         if self.tier == "INSTANT":
-            # Use ViT from artifact_database
-            from artifact_database import _vit_classify_image, _decode_base64_image_to_pil
+            # Use AIAnalyzer with ViT model_choice for instant classification
+            from ai_analyzer import AIAnalyzer
             self.analyzer_type = "vit"
+            self.analyzer = AIAnalyzer()
             self.expected_time = "1-2 seconds"
             
         elif self.tier in ["FAST", "BALANCED", "QUALITY"]:
@@ -91,15 +92,13 @@ class FastAnalyzer:
             raise
     
     def _analyze_with_vit(self, image: Image.Image) -> Dict[str, Any]:
-        """Fast ViT classification."""
-        from artifact_database import _vit_classify_image
-        
-        label, confidence = _vit_classify_image(image)
+        """Fast ViT classification using AIAnalyzer."""
+        result = self.analyzer.analyze_image(image, model_choice="vit")
         
         return {
-            "name": label,
-            "description": f"Classified as: {label}",
-            "confidence": float(confidence),
+            "name": result.get("name", "Unknown"),
+            "description": result.get("description", f"Classified as: {result.get('name', 'Unknown')}"),
+            "confidence": float(result.get("confidence", 0.0)),
             "method": "ViT Classification",
             "quality": "Basic"
         }
@@ -217,4 +216,3 @@ if __name__ == "__main__":
     print("\nRecommendation for 2-minute target: Use FAST or BALANCED tier")
     print("\nTo download the fast model:")
     print("  ollama pull llava:7b")
-

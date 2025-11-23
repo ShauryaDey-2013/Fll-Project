@@ -1,13 +1,14 @@
 # Archaeological Artifact Identifier (Fll-Project)
 
-This project is a Streamlit web app that uses Hugging Face vision models to analyze images of archaeological artifacts. It supports local development using a Python virtual environment and deployment using Docker / docker-compose. The app includes a small PostgreSQL-backed archive for saved artifacts.
+This project is a web application for analyzing and managing archaeological artifacts. It features a Rust + Yew frontend with a FastAPI backend, utilizing AI models for artifact identification and analysis.
 
 ## Features
-- Upload photos and get AI-powered identifications
-- Batch processing of multiple images
-- Archive of identified artifacts (PostgreSQL)
-- Visual similarity search using CLIP-style embeddings
-- Expert verification and profile editing UI
+- Modern, responsive web interface built with Rust and Yew
+- FastAPI backend with RESTful API
+- AI-powered artifact identification
+- Image upload and management
+- Search and filter artifacts
+- Responsive design with Tailwind CSS
 
 ---
 
@@ -75,24 +76,21 @@ GEMINI_API_KEY=
 
 2. Build and start the services (PowerShell):
 
-```powershell
-docker-compose build --no-cache
-docker-compose up -d
+### Backend Development
+
+The backend is built with FastAPI and provides a RESTful API for the frontend. The API documentation is available at `/docs` when the server is running.
+
+### Frontend Development
+
+The frontend is built with Rust and Yew, compiled to WebAssembly for high performance. The development server supports hot-reloading.
+
+### Environment Variables
+
+Create a `.env` file in the project root with the following variables:
+
+```bash
+DATABASE_URL=sqlite:///./artifacts.db
 ```
-
-3. Check logs:
-
-```powershell
-docker-compose logs -f
-```
-
-4. Stop services:
-
-```powershell
-docker-compose down
-```
-
-The web UI will be available at `http://localhost:8501` unless you changed the port mapping.
 
 ---
 

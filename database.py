@@ -25,8 +25,10 @@ from sqlalchemy import inspect, text
 # If it is missing or empty, fall back to a local SQLite file.
 _DB_URL = os.getenv("DATABASE_URL")
 if not _DB_URL:
-    # Default SQLite database located in the container's /app directory.
-    _DB_URL = "sqlite:///artifacts.db"
+    # Default SQLite database located in the project root directory
+    _DB_DIR = os.path.dirname(os.path.abspath(__file__))
+    _DB_PATH = os.path.join(_DB_DIR, "artifacts.db")
+    _DB_URL = f"sqlite:///{_DB_PATH}"
 
 # SQLite requires a special ``check_same_thread`` flag; other DBMS do not.
 # Add connection pooling for better performance
@@ -76,6 +78,7 @@ class Artifact(Base):
 
     # Image data
     image_data: Optional[bytes] = Column(LargeBinary)
+    thumbnail: Optional[bytes] = Column(LargeBinary)
 
     # Timestamps
     uploaded_at: datetime = Column(DateTime, default=datetime.utcnow, nullable=False)
@@ -107,8 +110,10 @@ class Artifact(Base):
             "function": self.function,
             "rarity": self.rarity,
             "confidence": self.confidence,
-            "uploaded_at": self.uploaded_at.isoformat() if self.uploaded_at else None,
-            "analyzed_at": self.analyzed_at.isoformat() if self.analyzed_at else None,
+            "image_data": self.image_data,
+            "thumbnail": self.thumbnail,
+            "uploaded_at": self.uploaded_at.isoformat() + "Z" if self.uploaded_at else None,
+            "analyzed_at": self.analyzed_at.isoformat() + "Z" if self.analyzed_at else None,
             "verification_status": self.verification_status,
             "verified_by": self.verified_by,
             "verified_at": self.verified_at.isoformat() if self.verified_at else None,
@@ -126,14 +131,16 @@ class Artifact(Base):
 def init_db() -> None:
     """Create all tables defined by the ORM models."""
     Base.metadata.create_all(bind=engine)
-    # Ensure 'tags' column exists for existing databases
+    # Ensure required columns exist for existing databases
     try:
         inspector = inspect(engine)
         columns = [c["name"] for c in inspector.get_columns("artifacts")]
-        if "tags" not in columns:
-            with engine.connect() as conn:
+        with engine.connect() as conn:
+            if "tags" not in columns:
                 conn.execute(text("ALTER TABLE artifacts ADD COLUMN tags TEXT"))
-                conn.commit()
+            if "thumbnail" not in columns:
+                conn.execute(text("ALTER TABLE artifacts ADD COLUMN thumbnail BLOB"))
+            conn.commit()
     except Exception:
         # Best-effort; ignore if not supported or already exists
         pass
@@ -175,10 +182,14 @@ def _normalize_tags_input(tags: Optional[Union[List[str], str]]) -> List[str]:
     return normalized
 
 
-def save_artifact(artifact_data: Dict[str, Any], image_bytes: bytes) -> int:
+def save_artifact(artifact_data: Dict[str, Any], image_bytes: bytes = None, thumbnail_bytes: bytes = None) -> int:
     """Persist a newly analysed artifact and return its primary key."""
     with get_db() as db:
         tags_list = _normalize_tags_input(artifact_data.get("tags"))
+        # Handle both old format (image_data in artifact_data) and new format (separate params)
+        image_to_save = image_bytes if image_bytes else artifact_data.get("image_data")
+        thumbnail_to_save = thumbnail_bytes if thumbnail_bytes else artifact_data.get("thumbnail")
+        
         artifact = Artifact(
             name=artifact_data.get("name", "Unknown"),
             value=artifact_data.get("value", "Unknown"),
@@ -189,7 +200,8 @@ def save_artifact(artifact_data: Dict[str, Any], image_bytes: bytes) -> int:
             function=artifact_data.get("function"),
             rarity=artifact_data.get("rarity"),
             confidence=artifact_data.get("confidence", 0.0),
-            image_data=image_bytes,
+            image_data=image_to_save,
+            thumbnail=thumbnail_to_save,
             analyzed_at=datetime.utcnow(),
             tags=",".join(tags_list) if tags_list else None,
         )
@@ -200,7 +212,7 @@ def save_artifact(artifact_data: Dict[str, Any], image_bytes: bytes) -> int:
 
 
 def get_all_artifacts(
-    limit: int = 100, offset: int = 0, include_images: bool = False
+    limit: int = 100, offset: int = 0, include_images: bool = True
 ) -> List[Dict[str, Any]]:
     """Return a paginated list of artifacts; optionally embed base64 image data."""
     with get_db() as db:
@@ -214,10 +226,16 @@ def get_all_artifacts(
         results: List[Dict[str, Any]] = []
         for artifact in artifacts:
             data = artifact.to_dict()
-            if include_images and artifact.image_data:
-                data["image_base64"] = base64.b64encode(artifact.image_data).decode(
-                    "utf-8"
-                )
+            # Convert binary fields to base64 strings for JSON serialization
+            if include_images:
+                if data.get("image_data") is not None:
+                    data["image_data"] = base64.b64encode(data["image_data"]).decode("utf-8")
+                if data.get("thumbnail") is not None:
+                    data["thumbnail"] = base64.b64encode(data["thumbnail"]).decode("utf-8")
+            else:
+                # Remove binary fields if not including images
+                data.pop("image_data", None)
+                data.pop("thumbnail", None)
             results.append(data)
         return results
 
@@ -228,10 +246,13 @@ def get_artifact_by_id(artifact_id: int) -> Optional[Dict[str, Any]]:
         artifact = db.query(Artifact).filter(Artifact.id == artifact_id).first()
         if not artifact:
             return None
-        # Convert to dict and include image data to avoid detached instance errors
+        # Convert to dict which now includes image_data and thumbnail
         data = artifact.to_dict()
-        if artifact.image_data:
-            data["image_data"] = artifact.image_data
+        # Convert binary fields to base64 strings for JSON serialization
+        if data.get("image_data") is not None:
+            data["image_data"] = base64.b64encode(data["image_data"]).decode("utf-8")
+        if data.get("thumbnail") is not None:
+            data["thumbnail"] = base64.b64encode(data["thumbnail"]).decode("utf-8")
         return data
 
 
@@ -272,7 +293,16 @@ def search_artifacts(
                 q = q.filter(Artifact.tags.ilike(f"%{t}%"))
 
         artifacts = q.order_by(Artifact.uploaded_at.desc()).limit(limit).all()
-        return [a.to_dict() for a in artifacts]
+        results: List[Dict[str, Any]] = []
+        for artifact in artifacts:
+            data = artifact.to_dict()
+            # Convert binary fields to base64 strings for JSON serialization
+            if data.get("image_data") is not None:
+                data["image_data"] = base64.b64encode(data["image_data"]).decode("utf-8")
+            if data.get("thumbnail") is not None:
+                data["thumbnail"] = base64.b64encode(data["thumbnail"]).decode("utf-8")
+            results.append(data)
+        return results
 
 
 def update_artifact_verification(
@@ -296,7 +326,13 @@ def update_artifact_verification(
             artifact.verified_at = datetime.utcnow()
 
         db.flush()
-        return artifact.to_dict()
+        data = artifact.to_dict()
+        # Convert binary fields to base64 strings for JSON serialization
+        if data.get("image_data") is not None:
+            data["image_data"] = base64.b64encode(data["image_data"]).decode("utf-8")
+        if data.get("thumbnail") is not None:
+            data["thumbnail"] = base64.b64encode(data["thumbnail"]).decode("utf-8")
+        return data
 
 
 def update_artifact_tags(artifact_id: int, tags: Optional[Union[List[str], str]]) -> Optional[Dict[str, Any]]:
@@ -308,7 +344,13 @@ def update_artifact_tags(artifact_id: int, tags: Optional[Union[List[str], str]]
         tags_list = _normalize_tags_input(tags)
         artifact.tags = ",".join(tags_list) if tags_list else None
         db.flush()
-        return artifact.to_dict()
+        data = artifact.to_dict()
+        # Convert binary fields to base64 strings for JSON serialization
+        if data.get("image_data") is not None:
+            data["image_data"] = base64.b64encode(data["image_data"]).decode("utf-8")
+        if data.get("thumbnail") is not None:
+            data["thumbnail"] = base64.b64encode(data["thumbnail"]).decode("utf-8")
+        return data
 
 
 def delete_artifact(artifact_id: int) -> bool:
