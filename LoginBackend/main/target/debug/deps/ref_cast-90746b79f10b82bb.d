@@ -1,0 +1,14 @@
+C:\Users\kirpr\source\repos\kirprap\Fll-Project\LoginBackend\main\target\debug\deps\ref_cast-90746b79f10b82bb.d: C:\Users\kirpr\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\ref-cast-1.0.25\src\lib.rs C:\Users\kirpr\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\ref-cast-1.0.25\src\custom.rs C:\Users\kirpr\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\ref-cast-1.0.25\src\layout.rs C:\Users\kirpr\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\ref-cast-1.0.25\src\trivial.rs C:\Users\kirpr\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\ref-cast-1.0.25\src\private.rs C:\Users\kirpr\source\repos\kirprap\Fll-Project\LoginBackend\main\target\debug\build\ref-cast-f2ff55e641165934\out/private.rs
+
+C:\Users\kirpr\source\repos\kirprap\Fll-Project\LoginBackend\main\target\debug\deps\libref_cast-90746b79f10b82bb.rlib: C:\Users\kirpr\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\ref-cast-1.0.25\src\lib.rs C:\Users\kirpr\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\ref-cast-1.0.25\src\custom.rs C:\Users\kirpr\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\ref-cast-1.0.25\src\layout.rs C:\Users\kirpr\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\ref-cast-1.0.25\src\trivial.rs C:\Users\kirpr\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\ref-cast-1.0.25\src\private.rs C:\Users\kirpr\source\repos\kirprap\Fll-Project\LoginBackend\main\target\debug\build\ref-cast-f2ff55e641165934\out/private.rs
+
+C:\Users\kirpr\source\repos\kirprap\Fll-Project\LoginBackend\main\target\debug\deps\libref_cast-90746b79f10b82bb.rmeta: C:\Users\kirpr\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\ref-cast-1.0.25\src\lib.rs C:\Users\kirpr\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\ref-cast-1.0.25\src\custom.rs C:\Users\kirpr\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\ref-cast-1.0.25\src\layout.rs C:\Users\kirpr\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\ref-cast-1.0.25\src\trivial.rs C:\Users\kirpr\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\ref-cast-1.0.25\src\private.rs C:\Users\kirpr\source\repos\kirprap\Fll-Project\LoginBackend\main\target\debug\build\ref-cast-f2ff55e641165934\out/private.rs
+
+C:\Users\kirpr\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\ref-cast-1.0.25\src\lib.rs:
+C:\Users\kirpr\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\ref-cast-1.0.25\src\custom.rs:
+C:\Users\kirpr\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\ref-cast-1.0.25\src\layout.rs:
+C:\Users\kirpr\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\ref-cast-1.0.25\src\trivial.rs:
+C:\Users\kirpr\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\ref-cast-1.0.25\src\private.rs:
+C:\Users\kirpr\source\repos\kirprap\Fll-Project\LoginBackend\main\target\debug\build\ref-cast-f2ff55e641165934\out/private.rs:
+
+# env-dep:OUT_DIR=C:\\Users\\kirpr\\source\\repos\\kirprap\\Fll-Project\\LoginBackend\\main\\target\\debug\\build\\ref-cast-f2ff55e641165934\\out

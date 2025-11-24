@@ -1,5 +1,7 @@
 [application]
 
+style =  ["./tailwind.css"]
+
 [web.app]
 
 # HTML title tag content
@@ -9,7 +11,7 @@ title = "archeology"
 [web.resource]
 
 # Additional CSS style files
-style = []
+style = ["./tailwind.css"]
 
 # Additional JavaScript files
 script = []
@@ -19,3 +21,5 @@ script = []
 # Javascript code file
 # serve: [dev-server] only
 script = []
+[desktop.app]
+style = ["main.css"]
