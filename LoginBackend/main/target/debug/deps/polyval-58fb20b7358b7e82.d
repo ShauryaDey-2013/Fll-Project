@@ -1,0 +1,10 @@
+C:\Users\kirpr\source\repos\kirprap\Fll-Project\LoginBackend\main\target\debug\deps\polyval-58fb20b7358b7e82.d: C:\Users\kirpr\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\polyval-0.4.5\src\lib.rs C:\Users\kirpr\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\polyval-0.4.5\src\backend.rs C:\Users\kirpr\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\polyval-0.4.5\src\backend\autodetect.rs C:\Users\kirpr\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\polyval-0.4.5\src\backend\clmul.rs C:\Users\kirpr\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\polyval-0.4.5\src\backend\soft64.rs C:\Users\kirpr\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\polyval-0.4.5\src\mulx.rs
+
+C:\Users\kirpr\source\repos\kirprap\Fll-Project\LoginBackend\main\target\debug\deps\libpolyval-58fb20b7358b7e82.rmeta: C:\Users\kirpr\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\polyval-0.4.5\src\lib.rs C:\Users\kirpr\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\polyval-0.4.5\src\backend.rs C:\Users\kirpr\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\polyval-0.4.5\src\backend\autodetect.rs C:\Users\kirpr\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\polyval-0.4.5\src\backend\clmul.rs C:\Users\kirpr\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\polyval-0.4.5\src\backend\soft64.rs C:\Users\kirpr\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\polyval-0.4.5\src\mulx.rs
+
+C:\Users\kirpr\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\polyval-0.4.5\src\lib.rs:
+C:\Users\kirpr\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\polyval-0.4.5\src\backend.rs:
+C:\Users\kirpr\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\polyval-0.4.5\src\backend\autodetect.rs:
+C:\Users\kirpr\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\polyval-0.4.5\src\backend\clmul.rs:
+C:\Users\kirpr\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\polyval-0.4.5\src\backend\soft64.rs:
+C:\Users\kirpr\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\polyval-0.4.5\src\mulx.rs:

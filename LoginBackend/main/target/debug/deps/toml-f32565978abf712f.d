@@ -1,0 +1,12 @@
+C:\Users\kirpr\source\repos\kirprap\Fll-Project\LoginBackend\main\target\debug\deps\toml-f32565978abf712f.d: C:\Users\kirpr\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\toml-0.4.10\src\lib.rs C:\Users\kirpr\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\toml-0.4.10\src\value.rs C:\Users\kirpr\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\toml-0.4.10\src\datetime.rs C:\Users\kirpr\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\toml-0.4.10\src\ser.rs C:\Users\kirpr\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\toml-0.4.10\src\de.rs C:\Users\kirpr\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\toml-0.4.10\src\tokens.rs C:\Users\kirpr\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\toml-0.4.10\src\macros.rs C:\Users\kirpr\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\toml-0.4.10\src\spanned.rs
+
+C:\Users\kirpr\source\repos\kirprap\Fll-Project\LoginBackend\main\target\debug\deps\libtoml-f32565978abf712f.rmeta: C:\Users\kirpr\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\toml-0.4.10\src\lib.rs C:\Users\kirpr\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\toml-0.4.10\src\value.rs C:\Users\kirpr\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\toml-0.4.10\src\datetime.rs C:\Users\kirpr\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\toml-0.4.10\src\ser.rs C:\Users\kirpr\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\toml-0.4.10\src\de.rs C:\Users\kirpr\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\toml-0.4.10\src\tokens.rs C:\Users\kirpr\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\toml-0.4.10\src\macros.rs C:\Users\kirpr\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\toml-0.4.10\src\spanned.rs
+
+C:\Users\kirpr\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\toml-0.4.10\src\lib.rs:
+C:\Users\kirpr\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\toml-0.4.10\src\value.rs:
+C:\Users\kirpr\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\toml-0.4.10\src\datetime.rs:
+C:\Users\kirpr\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\toml-0.4.10\src\ser.rs:
+C:\Users\kirpr\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\toml-0.4.10\src\de.rs:
+C:\Users\kirpr\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\toml-0.4.10\src\tokens.rs:
+C:\Users\kirpr\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\toml-0.4.10\src\macros.rs:
+C:\Users\kirpr\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\toml-0.4.10\src\spanned.rs:

@@ -1,0 +1,250 @@
+   0.290296600s  INFO prepare_target{force=false package_id=main v0.1.0 (C:\Users\kirpr\source\repos\kirprap\Fll-Project\LoginBackend\main) target="main"}: cargo::core::compiler::fingerprint: fingerprint error for main v0.1.0 (C:\Users\kirpr\source\repos\kirprap\Fll-Project\LoginBackend\main)/Check { test: false }/TargetInner { name: "main", doc: true, ..: with_path("C:\\Users\\kirpr\\source\\repos\\kirprap\\Fll-Project\\LoginBackend\\main\\src\\main.rs", Edition2024) }
+   0.290530000s  INFO prepare_target{force=false package_id=main v0.1.0 (C:\Users\kirpr\source\repos\kirprap\Fll-Project\LoginBackend\main) target="main"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\kirpr\source\repos\kirprap\Fll-Project\LoginBackend\main\target\debug\.fingerprint\main-b36c649fedc0f18c\bin-main`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_libgit2_prerelease
+  12: <unknown>
+  13: <unknown>
+  14: <unknown>
+  15: <unknown>
+  16: git_midx_writer_dump
+  17: git_filter_source_repo
+  18: git_midx_writer_dump
+  19: BaseThreadInitThunk
+  20: RtlUserThreadStart
+   0.304937800s  INFO prepare_target{force=false package_id=rocket v0.4.11 target="rocket"}: cargo::core::compiler::fingerprint: fingerprint error for rocket v0.4.11/Check { test: false }/TargetInner { name_inferred: true, ..: lib_target("rocket", ["lib"], "C:\\Users\\kirpr\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\rocket-0.4.11\\src\\lib.rs", Edition2015) }
+   0.304974200s  INFO prepare_target{force=false package_id=rocket v0.4.11 target="rocket"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\kirpr\source\repos\kirprap\Fll-Project\LoginBackend\main\target\debug\.fingerprint\rocket-4d4e12798d8045db\lib-rocket`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_libgit2_prerelease
+  13: <unknown>
+  14: <unknown>
+  15: <unknown>
+  16: <unknown>
+  17: git_midx_writer_dump
+  18: git_filter_source_repo
+  19: git_midx_writer_dump
+  20: BaseThreadInitThunk
+  21: RtlUserThreadStart
+   0.315789700s  INFO prepare_target{force=false package_id=rocket_codegen v0.4.11 target="rocket_codegen"}: cargo::core::compiler::fingerprint: fingerprint error for rocket_codegen v0.4.11/Build/TargetInner { name_inferred: true, for_host: true, proc_macro: true, ..: lib_target("rocket_codegen", ["proc-macro"], "C:\\Users\\kirpr\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\rocket_codegen-0.4.11\\src\\lib.rs", Edition2015) }
+   0.315941300s  INFO prepare_target{force=false package_id=rocket_codegen v0.4.11 target="rocket_codegen"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\kirpr\source\repos\kirprap\Fll-Project\LoginBackend\main\target\debug\.fingerprint\rocket_codegen-69c50c2ac3acebe6\lib-rocket_codegen`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_libgit2_prerelease
+  14: <unknown>
+  15: <unknown>
+  16: <unknown>
+  17: <unknown>
+  18: git_midx_writer_dump
+  19: git_filter_source_repo
+  20: git_midx_writer_dump
+  21: BaseThreadInitThunk
+  22: RtlUserThreadStart
+   0.317784200s  INFO prepare_target{force=false package_id=devise v0.2.1 target="devise"}: cargo::core::compiler::fingerprint: fingerprint error for devise v0.2.1/Build/TargetInner { name_inferred: true, ..: lib_target("devise", ["lib"], "C:\\Users\\kirpr\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\devise-0.2.1\\src\\lib.rs", Edition2015) }
+   0.317841800s  INFO prepare_target{force=false package_id=devise v0.2.1 target="devise"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\kirpr\source\repos\kirprap\Fll-Project\LoginBackend\main\target\debug\.fingerprint\devise-e8b42df5ead3a06f\lib-devise`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_filter_source_repo
+  14: git_libgit2_prerelease
+  15: <unknown>
+  16: <unknown>
+  17: <unknown>
+  18: <unknown>
+  19: git_midx_writer_dump
+  20: git_filter_source_repo
+  21: git_midx_writer_dump
+  22: BaseThreadInitThunk
+  23: RtlUserThreadStart
+   0.318221200s  INFO prepare_target{force=false package_id=devise_codegen v0.2.1 target="devise_codegen"}: cargo::core::compiler::fingerprint: fingerprint error for devise_codegen v0.2.1/Build/TargetInner { name_inferred: true, for_host: true, proc_macro: true, ..: lib_target("devise_codegen", ["proc-macro"], "C:\\Users\\kirpr\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\devise_codegen-0.2.1\\src\\lib.rs", Edition2015) }
+   0.318235500s  INFO prepare_target{force=false package_id=devise_codegen v0.2.1 target="devise_codegen"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\kirpr\source\repos\kirprap\Fll-Project\LoginBackend\main\target\debug\.fingerprint\devise_codegen-151a15843f752feb\lib-devise_codegen`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_filter_source_repo
+  14: git_filter_source_repo
+  15: git_libgit2_prerelease
+  16: <unknown>
+  17: <unknown>
+  18: <unknown>
+  19: <unknown>
+  20: git_midx_writer_dump
+  21: git_filter_source_repo
+  22: git_midx_writer_dump
+  23: BaseThreadInitThunk
+  24: RtlUserThreadStart
+   0.318486900s  INFO prepare_target{force=false package_id=devise_core v0.2.1 target="devise_core"}: cargo::core::compiler::fingerprint: fingerprint error for devise_core v0.2.1/Build/TargetInner { name_inferred: true, ..: lib_target("devise_core", ["lib"], "C:\\Users\\kirpr\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\devise_core-0.2.1\\src\\lib.rs", Edition2015) }
+   0.318499300s  INFO prepare_target{force=false package_id=devise_core v0.2.1 target="devise_core"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\kirpr\source\repos\kirprap\Fll-Project\LoginBackend\main\target\debug\.fingerprint\devise_core-13aba30b7151abf0\lib-devise_core`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_filter_source_repo
+  14: git_filter_source_repo
+  15: git_filter_source_repo
+  16: git_libgit2_prerelease
+  17: <unknown>
+  18: <unknown>
+  19: <unknown>
+  20: <unknown>
+  21: git_midx_writer_dump
+  22: git_filter_source_repo
+  23: git_midx_writer_dump
+  24: BaseThreadInitThunk
+  25: RtlUserThreadStart
+   0.326492200s  INFO prepare_target{force=false package_id=rocket_http v0.4.11 target="rocket_http"}: cargo::core::compiler::fingerprint: fingerprint error for rocket_http v0.4.11/Build/TargetInner { name_inferred: true, ..: lib_target("rocket_http", ["lib"], "C:\\Users\\kirpr\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\rocket_http-0.4.11\\src\\lib.rs", Edition2015) }
+   0.326531300s  INFO prepare_target{force=false package_id=rocket_http v0.4.11 target="rocket_http"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\kirpr\source\repos\kirprap\Fll-Project\LoginBackend\main\target\debug\.fingerprint\rocket_http-0af08577d99e0d46\lib-rocket_http`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_filter_source_repo
+  14: git_libgit2_prerelease
+  15: <unknown>
+  16: <unknown>
+  17: <unknown>
+  18: <unknown>
+  19: git_midx_writer_dump
+  20: git_filter_source_repo
+  21: git_midx_writer_dump
+  22: BaseThreadInitThunk
+  23: RtlUserThreadStart
+   0.342479700s  INFO prepare_target{force=false package_id=rocket_http v0.4.11 target="rocket_http"}: cargo::core::compiler::fingerprint: fingerprint dirty for rocket_http v0.4.11/Check { test: false }/TargetInner { name_inferred: true, ..: lib_target("rocket_http", ["lib"], "C:\\Users\\kirpr\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\rocket_http-0.4.11\\src\\lib.rs", Edition2015) }
+   0.342524100s  INFO prepare_target{force=false package_id=rocket_http v0.4.11 target="rocket_http"}: cargo::core::compiler::fingerprint:     dirty: FsStatusOutdated(StaleItem(FailedToReadMetadata { path: "C:\\Users\\kirpr\\source\\repos\\kirprap\\Fll-Project\\LoginBackend\\main\\target\\debug\\deps\\librocket_http-37423ca48b06a3e3.rmeta" }))
+   0.384465700s  INFO prepare_target{force=false package_id=main v0.1.0 (C:\Users\kirpr\source\repos\kirprap\Fll-Project\LoginBackend\main) target="main"}: cargo::core::compiler::fingerprint: fingerprint error for main v0.1.0 (C:\Users\kirpr\source\repos\kirprap\Fll-Project\LoginBackend\main)/Check { test: true }/TargetInner { name: "main", doc: true, ..: with_path("C:\\Users\\kirpr\\source\\repos\\kirprap\\Fll-Project\\LoginBackend\\main\\src\\main.rs", Edition2024) }
+   0.384506100s  INFO prepare_target{force=false package_id=main v0.1.0 (C:\Users\kirpr\source\repos\kirprap\Fll-Project\LoginBackend\main) target="main"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\kirpr\source\repos\kirprap\Fll-Project\LoginBackend\main\target\debug\.fingerprint\main-a69f63a0a7053849\test-bin-main`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_libgit2_prerelease
+  12: <unknown>
+  13: <unknown>
+  14: <unknown>
+  15: <unknown>
+  16: git_midx_writer_dump
+  17: git_filter_source_repo
+  18: git_midx_writer_dump
+  19: BaseThreadInitThunk
+  20: RtlUserThreadStart
+   Compiling devise_core v0.2.1
+   Compiling rocket_http v0.4.11
+error: could not compile `devise_core` (lib) due to 2 previous errors
+warning: build failed, waiting for other jobs to finish...
+error: could not compile `rocket_http` (lib) due to 1 previous error
+error: could not compile `rocket_http` (lib) due to 1 previous error

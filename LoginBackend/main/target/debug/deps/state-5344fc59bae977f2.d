@@ -1,0 +1,9 @@
+C:\Users\kirpr\source\repos\kirprap\Fll-Project\LoginBackend\main\target\debug\deps\state-5344fc59bae977f2.d: C:\Users\kirpr\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\state-0.4.2\src\lib.rs C:\Users\kirpr\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\state-0.4.2\src\ident_hash.rs C:\Users\kirpr\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\state-0.4.2\src\container.rs C:\Users\kirpr\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\state-0.4.2\src\storage.rs C:\Users\kirpr\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\state-0.4.2\src\init.rs
+
+C:\Users\kirpr\source\repos\kirprap\Fll-Project\LoginBackend\main\target\debug\deps\libstate-5344fc59bae977f2.rmeta: C:\Users\kirpr\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\state-0.4.2\src\lib.rs C:\Users\kirpr\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\state-0.4.2\src\ident_hash.rs C:\Users\kirpr\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\state-0.4.2\src\container.rs C:\Users\kirpr\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\state-0.4.2\src\storage.rs C:\Users\kirpr\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\state-0.4.2\src\init.rs
+
+C:\Users\kirpr\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\state-0.4.2\src\lib.rs:
+C:\Users\kirpr\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\state-0.4.2\src\ident_hash.rs:
+C:\Users\kirpr\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\state-0.4.2\src\container.rs:
+C:\Users\kirpr\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\state-0.4.2\src\storage.rs:
+C:\Users\kirpr\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\state-0.4.2\src\init.rs:
